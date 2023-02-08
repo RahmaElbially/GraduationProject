@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:graduation_project/Models/Colors/colors.dart';
-import 'package:graduation_project/Screens/login_screen.dart';
+import 'package:graduation_project/Models/colors.dart';
+import 'package:graduation_project/Screens/editor_screen.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
   @override
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
           () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => LoginScreen(),
+          builder: (context) => EditorScreen(),
         ),
       ),
     );

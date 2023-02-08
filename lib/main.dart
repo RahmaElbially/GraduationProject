@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'Screens/login_screen.dart';
 import 'Screens/splash_screen.dart';
+import 'Screens/editor_screen.dart';
+import 'package:flutter_drawing_board/flutter_drawing_board.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +22,15 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          localizationsDelegates: [
+            GlobalCupertinoLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+          ],
+          supportedLocales: [
+            Locale("ar"),
+          ],
+          locale: Locale("ar"),
           title: 'Flutter Demo',
           theme: ThemeData(
             // This is the theme of your application.
@@ -35,7 +48,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: SplashScreen(),
+      child: LoginScreen(),
     );
   }
 }
