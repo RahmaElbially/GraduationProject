@@ -42,6 +42,8 @@ dependencies:
   image_painter: ^0.5.0
   open_file: ^3.2.1
   path_provider: ^2.0.12
+  flutter_verification_code: ^1.1.6
+  pin_code_fields: ^7.4.0
 
 dev_dependencies:
   flutter_test:
@@ -102,5 +104,24 @@ flutter:
     - family: Generator
       fonts:
         - asset: assets/fonts/Generator Black.ttf
+
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/Helvetica.ttf
+
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
+
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp3.ttf
+
+    - family: MyFont
+      fonts:
+        - asset: assets/fonts/MyFont.ttf
+
+
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

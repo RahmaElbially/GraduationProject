@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Screens/login_screen.dart';
+import 'package:graduation_project/Screens/authenticationScreen/verfication_code_screen.dart';
+import 'package:graduation_project/Screens/authenticationScreen/forgetPassword_screen.dart';
+import 'package:graduation_project/Screens/personal_screen.dart';
+import 'Screens/collegesScreen/education_quality_screen.dart';
+import 'Screens/collegesScreen/fine_arts_screen.dart';
+import 'Screens/collegesScreen/home_screen.dart';
+import 'Screens/authenticationScreen/login_screen.dart';
+import 'Screens/authenticationScreen/signUp_screen.dart';
+import 'Screens/edit_personal_screen.dart';
+import 'Screens/notification_screen.dart';
 import 'Screens/splash_screen.dart';
 import 'Screens/editor_screen.dart';
 import 'package:flutter_drawing_board/flutter_drawing_board.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'Screens/collegesScreen/technical_education_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +33,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           localizationsDelegates: [
             GlobalCupertinoLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
@@ -48,7 +60,8 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: LoginScreen(),
+
+      child: EditPersonalScreen(),
     );
   }
 }
