@@ -3,13 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Screens/authenticationScreen/login_screen.dart';
-import 'package:graduation_project/Screens/edit_personal_screen.dart';
+import 'package:graduation_project/Screens/profileScreen/edit_personal_screen.dart';
 import 'package:graduation_project/my_font_icons.dart';
 
-import '../Models/colors.dart';
-import '../my_flutter_app_icons3.dart';
-import 'collegesScreen/fine_arts_screen.dart';
-import 'notification_screen.dart';
+import '../../Models/colors.dart';
+import '../../my_flutter_app_icons3.dart';
+import '../collegesScreen/fine_arts_screen.dart';
+import '../notification_screen.dart';
 
 class PersonalScreen extends StatefulWidget {
   const PersonalScreen({Key? key}) : super(key: key);

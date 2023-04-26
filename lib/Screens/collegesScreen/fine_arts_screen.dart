@@ -3,8 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Models/colors.dart';
+import 'package:graduation_project/Screens/exam_result_screen.dart';
 import 'package:graduation_project/Screens/notification_screen.dart';
-import 'package:graduation_project/Screens/personal_screen.dart';
+import 'package:graduation_project/Screens/profileScreen/personal_screen.dart';
 
 import '../../Models/horizontal_listView.dart';
 import '../../my_flutter_app_icons3.dart';
@@ -104,33 +105,39 @@ class _FineArtsScreenState extends State<FineArtsScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 0.04.sw),
                   child: Row(
                     children: [
-                      Container(
-                        height: 0.15.sh,
-                        width: 0.435.sw,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black38,
-                              blurRadius: 15.0,
-                              offset: Offset(0.0, 0.75)
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(right: 0.02.sw,left: 0.02.sw),
-                                child: Image.asset("assets/images/personal.png",height: 0.06.sh,),
-                              ),
-                              Text(
-                                "البيانات الشخصية",
-                                style: TextStyle(fontSize: 15.sp),
-                              ),
+                      GestureDetector(
+                        child: Container(
+                          height: 0.15.sh,
+                          width: 0.435.sw,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black38,
+                                  blurRadius: 15.0,
+                                  offset: Offset(0.0, 0.75)),
                             ],
                           ),
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      right: 0.02.sw, left: 0.02.sw),
+                                  child: Image.asset(
+                                    "assets/images/personal.png",
+                                    height: 0.06.sh,
+                                  ),
+                                ),
+                                Text(
+                                  "البيانات الشخصية",
+                                  style: TextStyle(fontSize: 15.sp),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
+                        onTap: () =>  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> PersonalScreen())),
                       ),
                       Container(
                         height: 0.15.sh,
@@ -196,34 +203,37 @@ class _FineArtsScreenState extends State<FineArtsScreen> {
                           ),
                         ),
                       ),
-                      Container(
-                        height: 0.15.sh,
-                        width: 0.435.sw,
-                        margin: EdgeInsets.only(right: 0.04.sw),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 15.0,
-                                offset: Offset(0.0, 0.75)
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(right: 0.015.sw,left: 0.02.sw),
-                                child: Image.asset("assets/images/result.png"),
-                              ),
-                              Text(
-                                "نتائج الإختبار",
-                                style: TextStyle(fontSize: 16.sp),
+                      GestureDetector(
+                        child: Container(
+                          height: 0.15.sh,
+                          width: 0.435.sw,
+                          margin: EdgeInsets.only(right: 0.04.sw),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black38,
+                                  blurRadius: 15.0,
+                                  offset: Offset(0.0, 0.75)
                               ),
                             ],
                           ),
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(right: 0.015.sw,left: 0.02.sw),
+                                  child: Image.asset("assets/images/result.png"),
+                                ),
+                                Text(
+                                  "نتائج الإختبار",
+                                  style: TextStyle(fontSize: 16.sp),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
+                        onTap: () =>  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> ExamResultScreen())),
                       ),
                     ],
                   ),

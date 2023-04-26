@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:graduation_project/Screens/personal_screen.dart';
+import 'package:graduation_project/Screens/profileScreen/personal_screen.dart';
 
 import '../Models/colors.dart';
 import '../my_flutter_app_icons3.dart';

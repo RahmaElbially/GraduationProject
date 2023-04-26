@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Screens/authenticationScreen/verfication_code_screen.dart';
 import 'package:graduation_project/Screens/authenticationScreen/forgetPassword_screen.dart';
-import 'package:graduation_project/Screens/personal_screen.dart';
+import 'package:graduation_project/Screens/exam_result_screen.dart';
+import 'package:graduation_project/Screens/profileScreen/personal_screen.dart';
 import 'Screens/collegesScreen/education_quality_screen.dart';
 import 'Screens/collegesScreen/fine_arts_screen.dart';
 import 'Screens/collegesScreen/home_screen.dart';
 import 'Screens/authenticationScreen/login_screen.dart';
 import 'Screens/authenticationScreen/signUp_screen.dart';
-import 'Screens/edit_personal_screen.dart';
+import 'Screens/profileScreen/edit_personal_screen.dart';
 import 'Screens/notification_screen.dart';
 import 'Screens/splash_screen.dart';
 import 'Screens/editor_screen.dart';
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
         );
       },
 
-      child: EditPersonalScreen(),
+      child: ExamResultScreen(),
     );
   }
 }
