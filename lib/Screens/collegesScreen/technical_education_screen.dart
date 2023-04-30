@@ -24,7 +24,7 @@ class _TechnicalEducationScreenState extends State<TechnicalEducationScreen> {
   void _updateIndex(int value) {
     setState(() {
       _currentIndex = value;
-      Navigator.push(context, MaterialPageRoute(builder: (context)=> _screens[_currentIndex]));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> _screens[_currentIndex]));
     });
   }
 

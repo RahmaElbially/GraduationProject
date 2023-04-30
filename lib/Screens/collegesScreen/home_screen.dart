@@ -15,6 +15,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List _collegesscreens=[FineArtsScreen(),EductionQualityScreen(),TechnicalEducationScreen(),];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView.builder(
         itemBuilder:(context, index) {
           return ContainerImage(image: 'assets/images/2021-05-17.png', title: 'كلية الفنون الجميلة',onTap: (){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> FineArtsScreen()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> _collegesscreens[index]));
           });
         },
         itemCount: 3,
