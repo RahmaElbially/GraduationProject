@@ -9,6 +9,7 @@ import 'Screens/collegesScreen/fine_arts_screen.dart';
 import 'Screens/collegesScreen/home_screen.dart';
 import 'Screens/authenticationScreen/login_screen.dart';
 import 'Screens/authenticationScreen/signUp_screen.dart';
+import 'Screens/courses_screen.dart';
 import 'Screens/profileScreen/edit_personal_screen.dart';
 import 'Screens/notification_screen.dart';
 import 'Screens/splash_screen.dart';
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
         );
       },
 
-      child: ExamResultScreen(),
+      child: CoursesScreen(),
     );
   }
 }

@@ -7,6 +7,7 @@ import 'package:graduation_project/Screens/profileScreen/personal_screen.dart';
 
 import '../../Models/horizontal_listView.dart';
 import '../../my_flutter_app_icons3.dart';
+import '../courses_screen.dart';
 import '../exam_result_screen.dart';
 
 class TechnicalEducationScreen extends StatefulWidget {
@@ -238,33 +239,36 @@ class _TechnicalEducationScreenState extends State<TechnicalEducationScreen> {
                   padding: EdgeInsets.only(left: 0.04.sw,right: 0.04.sw,bottom: 0.05.sh),
                   child: Row(
                     children: [
-                      Container(
-                        height: 0.15.sh,
-                        width: 0.435.sw,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 15.0,
-                                offset: Offset(0.0, 0.75)
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(right: 0.02.sw,left: 0.02.sw),
-                                child: Image.asset("assets/images/booking.png",height: 0.06.sh,),
-                              ),
-                              Text(
-                                "حجز الكورسات",
-                                style: TextStyle(fontSize: 16.sp),
+                      GestureDetector(
+                        child: Container(
+                          height: 0.15.sh,
+                          width: 0.435.sw,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black38,
+                                  blurRadius: 15.0,
+                                  offset: Offset(0.0, 0.75)
                               ),
                             ],
                           ),
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(right: 0.02.sw,left: 0.02.sw),
+                                  child: Image.asset("assets/images/booking.png",height: 0.06.sh,),
+                                ),
+                                Text(
+                                  "حجز الكورسات",
+                                  style: TextStyle(fontSize: 16.sp),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
+                        onTap: () =>  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> CoursesScreen())),
                       ),
                       Container(
                         height: 0.15.sh,
